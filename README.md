@@ -13,7 +13,7 @@ For more information, see the following
 - the preprint paper: https://arxiv.org/abs/2302.08247
 
 # How to use
-Run `main.m`
+Run `./RCHU/main.m`
 
 # Contents
 #### Data
