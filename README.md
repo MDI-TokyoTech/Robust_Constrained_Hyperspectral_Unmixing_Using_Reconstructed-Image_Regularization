@@ -1,6 +1,6 @@
 # Robust_Constrained_Hyperspectral_Unmixing_Using_Reconstructed-Image_Regularization
 
-This is the demo code of the method proposed in the following reference:
+This is a demo code of the method proposed in the following reference:
 
 K. Naganuma, Y. Nagamatsu, and S. Ono
 ``Robust Constrained Hyperspectral Unmixing Using Reconstructed-Image Regularization.''
@@ -9,8 +9,8 @@ Update history:
 Augast 7, 2023: v1.0 
 
 For more information, see the following 
-- the project website: https://www.mdi.c.titech.ac.jp/publications/rchu
-- the preprint paper: https://arxiv.org/abs/2302.08247
+- Project website: https://www.mdi.c.titech.ac.jp/publications/rchu
+- Preprint paper: https://arxiv.org/abs/2302.08247
 
 # How to use
 Run `./RCHU/main.m`
