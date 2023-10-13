@@ -1,0 +1,1 @@
+function [n, m, nn, mm] = length_block (b)k1 = rowsizes(b); k2 = colsizes(b);n = length(k1); m = length(k2);nn = k1(1); mm = k2(1);
