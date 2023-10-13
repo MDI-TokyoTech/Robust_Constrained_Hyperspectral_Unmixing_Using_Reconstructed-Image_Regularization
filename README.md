@@ -1,19 +1,19 @@
-# Robust_Constrained_Hyperspectral_Unmixing_Using_Reconstructed-Image_Regularization
+# Towards Robust Hyperspectral Unmixing: Mixed Noise Modeling and Image-Domain Regularization
 
 This is a demo code of the method proposed in the following reference:
 
-K. Naganuma, Y. Nagamatsu, and S. Ono
-``Robust Constrained Hyperspectral Unmixing Using Reconstructed-Image Regularization.''
+K. Naganuma and S. Ono
+``Towards Robust Hyperspectral Unmixing: Mixed Noise Modeling and Image-Domain Regularization''
 
 Update history:
-Augast 7, 2023: v1.0 
+Octber 13, 2023: v1.0 
 
 For more information, see the following 
-- Project website: https://www.mdi.c.titech.ac.jp/publications/rchu
+- Project website: https://www.mdi.c.titech.ac.jp/publications/rhuidr
 - Preprint paper: https://arxiv.org/abs/2302.08247
 
 # How to use
-Run `./RCHU/main.m`
+Run `main.m`
 
 # Contents
 #### Data
@@ -28,8 +28,8 @@ If you use this code, please cite the following paper:
 
 ```
 @misc{naganuma2023robust,
-      title={Robust Constrained Hyperspectral Unmixing Using Reconstructed-Image Regularization}, 
-      author={Kazuki Naganuma and Yuki Nagamatsu and Shunsuke Ono},
+      title={Towards Robust Hyperspectral Unmixing: Mixed Noise Modeling and Image-Domain Regularization}, 
+      author={Kazuki Naganuma and Shunsuke Ono},
       year={2023},
       eprint={2302.08247},
       archivePrefix={arXiv},
