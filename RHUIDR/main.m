@@ -148,16 +148,9 @@ end
 
 %% functions
 function [cpsnr,psnr]=PSNR_array(recon,org,skip)
-org=org(skip+1:end-skip,skip+1:end-skip,:);
-recon=(recon(skip+1:end-skip,skip+1:end-skip,:));
-
-  [m, n,~]=size(org);
-
-    sse=squeeze(sum(sum((org-recon).^2))); %square sum of error  
-    mse=sse./(m*n);  %mean square error of each band.
-    maxval=squeeze(max(max(org)));
-    psnr= 10*log10( (maxval.^2) ./mse);
-    cpsnr=mean(psnr);
+ [m, n,~]=size(org);
+    vec_PSNRs = 10*log10(m*n./sum((recon - org).^2, [1, 2]));
+    result = mean(vec_PSNRs, "all");
 
 end
 
@@ -172,19 +165,9 @@ function [result] = RMSE(recon, org)
 end
 
 function [Ps] = Ps(recon, org, thres)
-    [m,n,k] = size(org);
-    re_org = (reshape(org,m*n,k))';
-    re_recon = (reshape(recon,m*n,k))';
-    j = 0;
-    for i=1:k
-        for l = 1:m*n
-        X_recon = abs(re_recon(i,l))*norm(re_recon(i,l));
-            X_diff = abs(re_org(i,l)-re_recon(i,l))*abs(re_org(i,l)-re_recon(i,l));
-            if (X_diff/X_recon) <= thres
-                j = j+1;
-            end
-        end
-    end
-    Ps = j/(m*n*k);
+    [m,n,~] = size(org);
+    tmp = sum((recon - org).^2, 3)./sum(org.^2, 3);
+    map_prob = double(tmp <= thres);
+    Ps = sum(map_prob, "all")/(m*n);
 end
 %% code ends here.
