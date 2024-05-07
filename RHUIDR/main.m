@@ -147,7 +147,7 @@ for idx_abun = 1:num_endmembers_exist
 end
 
 %% functions
-function [cpsnr,psnr]=PSNR_array(recon,org,skip)
+function result=PSNR_array(recon,org,skip)
  [m, n,~]=size(org);
     vec_PSNRs = 10*log10(m*n./sum((recon - org).^2, [1, 2]));
     result = mean(vec_PSNRs, "all");
